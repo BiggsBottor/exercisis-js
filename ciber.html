@@ -69,11 +69,51 @@
         //Donat el seguit llistat d’objectes ‘taula’, ‘cadira’, ‘ordinador’, ‘libreta’, 
         //fer un bucle que mostri per pantalla cada objecte i la seva posició al llistat.
         /* --- */
-        var llistat = ["taula", "cadira", "ordinador", "libreta"];
-        for (var i = 0; i < llistat.length; i++) {
-            //console.log(`el objecte ${llistat[i]} está a la posició ${i}`);
-            console.log("el objecte " + llistat[i] + " está a la posició " + i);
+        // var llistat = ["taula", "cadira", "ordinador", "libreta"];
+        // for (var i = 0; i < llistat.length; i++) {
+        //     //console.log(`el objecte ${llistat[i]} está a la posició ${i}`);
+        //     console.log("el objecte " + llistat[i] + " está a la posició " + i);
+        // }
+
+        //Exercici 8:
+        //Crea una funció anomenada calculadora que tingui com a entrada els següents paràmetres: 
+        //operador, valor1 i valor2.
+        //Estructura de la funció que faci sumes, restes i multiplicacions. 
+        //El resultat haurà de ser mostrar per pantalla.
+        /* --- */
+        var Operador, Valor1, Valor2;
+        var elem = document.querySelector("body");
+
+        function calculadora(operador, valor1, valor2) {
+            Operador = operador;
+            Valor1 = valor1;
+            Valor2 = valor2;
+            switch (operador) {
+                case "suma":
+                    // console.log("sumando");                    
+                    var total = parseInt(valor1) + parseInt(valor2);
+                    break;
+                case "resta":
+                    // console.log("restando");
+                    var total = parseInt(valor1) - parseInt(valor2);
+                    break;
+                case "multiplica":
+                    // console.log("multiplicando");
+                    var total = parseInt(valor1) * parseInt(valor2);
+                    break;
+                default:
+                    var total = "Los operadores admitidos son: suma, resta o multiplica";
+            }
+            return total;
         }
+        var resultat = calculadora("resta", 40, 20);
+        console.log(resultat);
+        var resultat = calculadora("suma", 10, 40);
+        console.log(resultat);
+        var resultat = calculadora("multiplica", 10, 10);
+        console.log(resultat);
+        var resultat = calculadora("divide", 10, 10);
+        console.log(resultat);
     </script>
 </body>
 
