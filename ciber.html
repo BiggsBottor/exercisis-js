@@ -16,7 +16,7 @@
         /* Exercici 2:
         Crea un alert que mostri el teu nom: */
         // var name = prompt("cómo te llamas?");
-        // alert(`¡Me llamo ${name}!`); //en ECMAScript 6
+        // alert(`¡Me llamo ${name}!`); //en ECMAScript 6 o ES6
         // alert("¡Me llamo " + name + "!"); //En js básico
 
         /*Exercici 3:
@@ -34,12 +34,30 @@
         //Exercici 5:
         //Crea una variable nota_examen juntament amb un alert que ens digui si l’examen ha estat 
         //aprovat o no juntament amb la nota. (caldrà utilitzar un condicional IF)
-        var nota_examen = prompt("nota numèrica del exàmen (de 0 a 10)");
-        if (nota_examen >= 5) {
-            alert("Aprovat");
-        } else {
-            alert("Suspès");
+        // var nota_examen = prompt("nota numèrica del exàmen (de 0 a 10)"); //no se tiene en cuenta si se introduce un dato no permitido
+        // if (nota_examen >= 5) {
+        //     alert("Aprovat");
+        // } else {
+        //     alert("Suspès");
+        // }
+
+        //Exercici 6:
+        //Reemplaça la paraula blau per la paraula verd a la següent cadena de text Tinc un cotxe de color blau.
+        //Després intenta fer-ho remplaçant les `o` per les `u`
+        var text = "Tinc un cotxe de color blau";
+        console.log(text);
+        console.log(text.replace("blau", "verd")); //reemplaza la palabra `blau` por `verd`
+        var arrText = text.split(""); // convierte en array el texto, dejando el texto tal cual ya que no se especifica ningún separador
+        var tuxt = ""; //variable para almacenar de vuelta en una sóla variable de texto el texto anterior
+        for (var i = 0; i < text.length; i++) {
+            if (arrText[i] == "o") {
+                arrText[i] = "u";
+            }
+            //tuxt = tuxt + arrText[i];
+            tuxt = tuxt.concat(arrText[i]); // concat hace la misma función de el operador `+`
         }
+        //console.log(text.replace("o", "u")); // sólo reemplaza la primera coincidencia
+        console.log(tuxt);
     </script>
 </body>
 
